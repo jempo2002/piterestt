@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bkkk"
+    >
+    <TextView
+        android:id="@+id/tvregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/crear"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+    android:id="@+id/tvuser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:text="@string/username"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:layout_marginBottom="10dp"
+    android:textStyle="bold"
+    />
+
+    <EditText
+        android:id="@+id/ethuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/huser"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tvpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="@string/contra"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/ethpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/hpsw"
+        />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="@color/bt1"
+        android:text="@string/registro"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="@color/bt2"
+        android:text="@string/cancelar"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        />
+
+</LinearLayout>
