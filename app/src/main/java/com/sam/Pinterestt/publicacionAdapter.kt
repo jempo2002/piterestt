@@ -1,5 +1,6 @@
 package com.sam.Pinterestt
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,11 +27,19 @@ class PublicacionAdapter(
         holder.binding.tvContenido.text = publicacion.contenido
 
         holder.binding.btnEditar.setOnClickListener {
-            onEdit(position)  // Llamamos al fragment para editar
+            onEdit(position)
         }
 
         holder.binding.btnEliminar.setOnClickListener {
             onDelete(position)
+        }
+
+        holder.binding.btncomentar.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, comentarios::class.java).apply {
+                putExtra("publicacion_id", publicacion.idPublicacion ?: -1) //valor por defecto si es null
+            }
+            context.startActivity(intent)
         }
     }
 

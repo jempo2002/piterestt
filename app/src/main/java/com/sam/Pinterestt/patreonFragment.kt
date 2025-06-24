@@ -1,6 +1,5 @@
 package com.sam.Pinterestt
 
-
 import androidx.appcompat.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,35 +30,49 @@ class PatreonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupRecyclerView()
+        setupAddButton()
+    }
+
+    private fun setupRecyclerView() {
         adapter = PublicacionAdapter(
             publicaciones,
             onEdit = { position -> mostrarDialogoEditar(position) },
             onDelete = { position ->
                 publicaciones.removeAt(position)
-                adapter.notifyDataSetChanged()
-
+                adapter.notifyItemRemoved(position)
             }
         )
 
-        binding.rvPublicaciones.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvPublicaciones.adapter = adapter
+        binding.rvPublicaciones.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = this@PatreonFragment.adapter
+        }
+    }
 
-
-        adapter.notifyDataSetChanged()
-
-
+    private fun setupAddButton() {
         binding.btadd2.setOnClickListener {
             val titulo = binding.etTitulo.text.toString()
             val contenido = binding.etContenido.text.toString()
+
             if (titulo.isNotEmpty() && contenido.isNotEmpty()) {
-                publicaciones.add(Publicacion(titulo, contenido))
+                val nuevaPublicacion = Publicacion(
+                    idPublicacion = Publicacion.generarNuevoId(),
+                    titulo = titulo,
+                    contenido = contenido
+                )
+                publicaciones.add(nuevaPublicacion)
                 adapter.notifyItemInserted(publicaciones.size - 1)
-                binding.etTitulo.text.clear()
-                binding.etContenido.text.clear()
+                limpiarCampos()
             } else {
                 Toast.makeText(requireContext(), "Completa todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun limpiarCampos() {
+        binding.etTitulo.text.clear()
+        binding.etContenido.text.clear()
     }
 
     private fun mostrarDialogoEditar(position: Int) {

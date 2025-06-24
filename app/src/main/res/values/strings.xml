@@ -40,6 +40,9 @@
     <string name="editar">Editar</string>
     <string name="registro">Registrarse</string>
     <string name="cancelar">Cancelar</string>
+    <string name="addcoment">Añadir comentario</string>
+    <string name="comentario">Escribe tu comentario</string>
+    <string name="comentarios">Comentarios</string>
 
 
 </resources>
