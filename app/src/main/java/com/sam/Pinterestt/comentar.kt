@@ -6,7 +6,6 @@ data class Comentario(
     val id: Int = 0,
     val publicacionId: Int,
     var contenido: String,
-    val fecha: Long = System.currentTimeMillis()
 ) : Serializable {
 
     constructor(publicacionId: Int, contenido: String) : this(

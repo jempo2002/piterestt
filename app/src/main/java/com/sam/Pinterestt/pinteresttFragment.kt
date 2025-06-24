@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sam.Pinterestt.databinding.FragmentPublicacionBinding
 
-class PatreonFragment : Fragment() {
+class pinteresttFragment : Fragment() {
 
     private var _binding: FragmentPublicacionBinding? = null
     private val binding get() = _binding!!
@@ -46,7 +46,7 @@ class PatreonFragment : Fragment() {
 
         binding.rvPublicaciones.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = this@PatreonFragment.adapter
+            adapter = this@pinteresttFragment.adapter
         }
     }
 

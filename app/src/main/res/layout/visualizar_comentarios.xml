@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".visualizarActivity"
+    android:background="@drawable/bkkk"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="80dp">
+
+        <Button
+            android:id="@+id/btaddcomentarios"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/bt1"
+            android:text="@string/addcoment"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/btnsalir1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/puerta"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

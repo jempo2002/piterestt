@@ -25,14 +25,14 @@ class visualizarActivity : AppCompatActivity() {
             val fragmentTransaction = fragmentManager.beginTransaction()
             val currentFragment = fragmentManager.findFragmentById(R.id.fragmentContainerView)
 
-            if (binding.fragmentContainerView.visibility == View.VISIBLE && currentFragment is PatreonFragment) {
+            if (binding.fragmentContainerView.visibility == View.VISIBLE && currentFragment is pinteresttFragment) {
                 // Si ya está visible, lo removemos y ocultamos el contenedor
                 fragmentTransaction.remove(currentFragment)
                 fragmentTransaction.commit()
                 binding.fragmentContainerView.visibility = View.GONE
             } else {
                 // Si no está visible, lo mostramos
-                fragmentTransaction.replace(R.id.fragmentContainerView, PatreonFragment())
+                fragmentTransaction.replace(R.id.fragmentContainerView, pinteresttFragment())
                 fragmentTransaction.commit()
                 binding.fragmentContainerView.visibility = View.VISIBLE
             }
