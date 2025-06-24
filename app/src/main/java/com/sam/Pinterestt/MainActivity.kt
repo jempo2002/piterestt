@@ -1,4 +1,4 @@
-package com.sam.pinterestt
+package com.sam.Pinterestt
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.sam.Pinterestt.R
 import com.sam.Pinterestt.databinding.ActivityMainBinding
-import com.sam.pinterestt.registro
-import com.sam.pinterestt.visualizarActivity
+import com.sam.Pinterestt.registro
+import com.sam.Pinterestt.visualizarActivity
 
 class MainActivity : AppCompatActivity() {
 

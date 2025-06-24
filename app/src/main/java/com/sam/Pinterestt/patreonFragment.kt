@@ -10,11 +10,11 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sam.Pinterestt.databinding.FragmentPatreonBinding
+import com.sam.Pinterestt.databinding.FragmentPublicacionBinding
 
 class PatreonFragment : Fragment() {
 
-    private var _binding: FragmentPatreonBinding? = null
+    private var _binding: FragmentPublicacionBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var adapter: PublicacionAdapter
@@ -24,7 +24,7 @@ class PatreonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPatreonBinding.inflate(inflater, container, false)
+        _binding = FragmentPublicacionBinding.inflate(inflater, container, false)
         return binding.root
     }
 

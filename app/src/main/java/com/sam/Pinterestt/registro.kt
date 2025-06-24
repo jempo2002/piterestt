@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.sam.Pinterestt.databinding.RegistroBinding
-import com.sam.pinterestt.MainActivity
+import com.sam.Pinterestt.MainActivity
 
 class registro : AppCompatActivity() {
 

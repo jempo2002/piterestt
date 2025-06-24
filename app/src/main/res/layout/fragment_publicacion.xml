@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/nuevapub"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -27,20 +27,17 @@
             android:id="@+id/etTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="25dp"
-
             android:hint="@string/titulo"
             android:padding="10dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="#7E7E7E" />
+            android:textColor="@android:color/black"
+        />
 
         <EditText
             android:id="@+id/etContenido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/Contenido"
-            android:textColorHint="#7E7E7E"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:padding="10dp" />
 
 

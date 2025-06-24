@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.sam.Pinterestt.databinding.ActivityVisualizarBinding
-import com.sam.pinterestt.MainActivity
+import com.sam.Pinterestt.MainActivity
 
 class visualizarActivity : AppCompatActivity() {
 
