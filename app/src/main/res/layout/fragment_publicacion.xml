@@ -49,17 +49,35 @@
             android:scrollbars="vertical"
             android:layout_marginVertical="25dp"
             />
+        
 
-        <Button
-            android:id="@+id/btadd2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="80dp"
-            android:backgroundTint="@color/bt1"
-            android:text="@string/addpub"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:layout_marginBottom="80dp">
+
+            <Button
+                android:id="@+id/btaddfp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bt1"
+                android:text="@string/addpub"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/btnsalirfp"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/puerta"
+                android:scaleType="centerInside"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
 

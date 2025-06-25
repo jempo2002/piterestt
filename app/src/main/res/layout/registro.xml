@@ -38,6 +38,8 @@
         android:layout_marginHorizontal="30dp"
         android:hint="@string/huser"
         android:layout_marginBottom="30dp"
+        android:textColor="@color/hints"
+        android:textColorHint="@color/hints"
         />
 
     <TextView
@@ -57,6 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:hint="@string/hpsw"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPassword"
+        android:textColor="@color/hints"
+        android:textColorHint="@color/hints"
         />
 
     <Button

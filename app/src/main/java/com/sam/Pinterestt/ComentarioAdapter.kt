@@ -15,8 +15,9 @@ class ComentariosAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(comentario: Comentario) {
-            binding.btnEditar.setOnClickListener { onEditClick(comentario) }
-            binding.btnEliminar.setOnClickListener { onDeleteClick(comentario) }
+            binding.tvcomentarioic.text = comentario.contenido
+            binding.btneditaric.setOnClickListener { onEditClick(comentario) }
+            binding.btneliminaric.setOnClickListener { onDeleteClick(comentario) }
         }
     }
 

@@ -26,15 +26,20 @@ class PublicacionAdapter(
         holder.binding.tvTitulo.text = publicacion.titulo
         holder.binding.tvContenido.text = publicacion.contenido
 
-        holder.binding.btnEditar.setOnClickListener {
+        holder.binding.btneliminarip.setOnClickListener {
+            androidx.appcompat.app.AlertDialog.Builder(holder.itemView.context)
+                .setTitle("Confirmar eliminación")
+                .setMessage("¿Estás seguro de que deseas eliminar esta publicación?")
+                .setPositiveButton("Sí") { _, _ -> onDelete(position) }
+                .setNegativeButton("No", null)
+                .show()
+        }
+
+        holder.binding.btneditarip.setOnClickListener {
             onEdit(position)
         }
 
-        holder.binding.btnEliminar.setOnClickListener {
-            onDelete(position)
-        }
-
-        holder.binding.btncomentar.setOnClickListener {
+        holder.binding.btncomentarip.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, comentarios::class.java).apply {
                 putExtra("publicacion_id", publicacion.idPublicacion ?: -1) //valor por defecto si es null

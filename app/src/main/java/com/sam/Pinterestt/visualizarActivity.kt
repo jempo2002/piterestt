@@ -20,7 +20,7 @@ class visualizarActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.btadd1.setOnClickListener {
+        binding.btaddav.setOnClickListener {
             val fragmentManager = supportFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
             val currentFragment = fragmentManager.findFragmentById(R.id.fragmentContainerView)
@@ -39,9 +39,8 @@ class visualizarActivity : AppCompatActivity() {
         }
 
 
-        binding.btnsalir.setOnClickListener {
+        binding.btnsalirav.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }

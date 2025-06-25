@@ -39,6 +39,8 @@
             android:layout_marginHorizontal="30dp"
             android:hint="@string/huser"
             android:layout_marginBottom="30dp"
+            android:textColorHint="#3B3636"
+            android:textColor="#3B3636"
             />
 
         <TextView
@@ -58,7 +60,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:hint="@string/hpsw"
-            />
+            android:inputType="textPassword"
+            android:textColorHint="#3B3636"
+            android:textColor="#3B3636" />
 
         <TextView
             android:id="@+id/tvforgot"

@@ -1,5 +1,6 @@
 package com.sam.Pinterestt
 
+import android.content.Intent
 import androidx.appcompat.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -51,7 +52,7 @@ class pinteresttFragment : Fragment() {
     }
 
     private fun setupAddButton() {
-        binding.btadd2.setOnClickListener {
+        binding.btaddfp.setOnClickListener {
             val titulo = binding.etTitulo.text.toString()
             val contenido = binding.etContenido.text.toString()
 
@@ -68,6 +69,13 @@ class pinteresttFragment : Fragment() {
                 Toast.makeText(requireContext(), "Completa todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.btnsalirfp.setOnClickListener {
+            val intent = Intent(requireContext(), visualizarActivity::class.java)
+            startActivity(intent)
+            requireActivity() .finish() //finaliza la actividad
+        }
+
     }
 
     private fun limpiarCampos() {

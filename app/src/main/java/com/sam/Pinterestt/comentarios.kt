@@ -1,5 +1,6 @@
 package com.sam.Pinterestt
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.EditText
@@ -50,7 +51,7 @@ class comentarios : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        binding.btadd2.setOnClickListener {
+        binding.btaddcomentac.setOnClickListener {
             val textoComentario = binding.etcomentario.text.toString().trim()
             if (textoComentario.isNotEmpty()) {
                 agregarComentario(textoComentario)
@@ -59,14 +60,18 @@ class comentarios : AppCompatActivity() {
                 Toast.makeText(this, "Escribe un comentario", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.btnsalirac.setOnClickListener {
+            val intent = Intent(this, visualizarActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun cargarComentarios(publicacionId: Int) {
         // Simulación de datos iniciales
         listaComentarios.addAll(
             listOf(
-                Comentario(id = 1, publicacionId = publicacionId, contenido = "Comentario de ejemplo 1"),
-                Comentario(id = 2, publicacionId = publicacionId, contenido = "Comentario de ejemplo 2")
             )
         )
         comentariosAdapter.notifyDataSetChanged()
